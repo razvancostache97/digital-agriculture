@@ -1,0 +1,35 @@
+# 🎫 Ticket – Wrong Translation on Agmeo Sign-In & Dashboard
+
+**Title:** `[Bug] Wrong translation displayed after switching language from German to English`
+
+**Description:**  
+When switching the interface language from **Deutsch** to **English** in the user account settings, some labels remain in German instead of being translated to English. This creates confusion for users expecting a consistent English interface.
+
+**Steps to Reproduce:**  
+1. Navigate to `https://www.agmeo.com/sign-in`  
+2. Log in with valid credentials  
+3. Go to `Fields` page (e.g., `https://www.agmeo.com/app/org_32mfn6OaYq3oe77aatmdVXHNd3a/fields/2025`)  
+4. Open the **user menu → Konto verwalten**  
+5. Open **Sprache** setting  
+6. Change language from **Deutsch** to **English**  
+7. Close modal and return to dashboard  
+
+**Expected Result:**  
+- All labels, buttons, and input placeholders should be displayed in English.  
+
+**Actual Result:**  
+- Certain elements still display German text, e.g.:  
+  - `"Name filtern..."` instead of `"Filter name..."`  
+
+**Acceptance Criteria:**  
+- [ ] After switching to English, all UI elements (labels, buttons, placeholders) are displayed in English  
+- [ ] Verify specifically that `"Name filtern..."` is translated correctly  
+- [ ] Regression check: language switch works consistently across dashboard, settings, and fields pages  
+- [ ] Add automated test coverage for language switching  
+
+**Attachments:**  
+- Screenshot showing `"Name filtern..."` after switching to English  
+
+**Priority:** P2 (Medium – affects usability for English users, but workaround exists)  
+
+**Tags:** `i18n`, `frontend`, `translations`, `UI`  

@@ -1,0 +1,35 @@
+# 🎫 Ticket – Fertilizer Application Rate Resets to 0
+
+**Title:** `[Bug] Fertilizer application standard rate resets to 0 when switching to planting`
+
+**Description:**  
+When creating a fertilizer map and entering a standard application rate (e.g., `100`), the value resets to `0` if the user switches to the **Planting** option and then back to **Fertilizer application**. This causes data loss and requires users to re-enter values.
+
+**Steps to Reproduce:**  
+1. Log in at `https://www.agmeo.com/sign-in`  
+2. Navigate to **Fields → Crop rotation → Operations**  
+3. Open a season (e.g., *Season 2023*)  
+4. Go to **Fertilizer application**  
+5. Click **Create fertilizer map**  
+6. Enter `100` in **Standard rate** field  
+7. Switch from **Fertilizer application** to **Planting**  
+8. Switch back to **Fertilizer application**  
+
+**Expected Result:**  
+- The previously entered **Standard rate** (e.g., `100`) should persist when returning to **Fertilizer application**.  
+
+**Actual Result:**  
+- The **Standard rate** field resets to `0`.  
+
+**Acceptance Criteria:**  
+- [ ] Standard rate persists when switching between **Planting** and **Fertilizer application**  
+- [ ] No unintended reset of user-entered values  
+- [ ] Regression test added to ensure values are preserved  
+
+**Attachments:**  
+- Playwright test covering the scenario (see code snippet provided)  
+- Screenshot/video showing rate reset  
+
+**Priority:** P1 (High – critical workflow broken for fertilizer planning)  
+
+**Tags:** `frontend`, `forms`, `fertilizer`, `data-loss`, `agriculture`  

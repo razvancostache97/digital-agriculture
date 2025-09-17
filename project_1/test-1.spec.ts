@@ -1,0 +1,35 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://www.agmeo.com/sign-in');
+  await page.getByRole('textbox', { name: 'E-Mail-Adresse' }).click();
+  await page.getByRole('button', { name: 'Accept' }).click();
+  await page.getByRole('textbox', { name: 'E-Mail-Adresse' }).click();
+  await page.getByRole('textbox', { name: 'E-Mail-Adresse' }).fill('razvancostache97@gmail.com');
+  await page.getByRole('button', { name: 'Weiter' }).click();
+  await page.getByRole('textbox', { name: 'Passwort' }).click();
+  await page.getByRole('textbox', { name: 'Passwort' }).fill('Agvolution2025');
+  await page.getByRole('textbox', { name: 'Passwort' }).press('Enter');
+  await page.getByRole('button', { name: 'Weiter' }).click();
+  await page.goto('https://www.agmeo.com/app/org_32mfn6OaYq3oe77aatmdVXHNd3a/fields/2025');
+  await page.getByRole('button', { name: 'Open user button' }).click();
+  await page.getByRole('menuitem', { name: 'Konto verwalten' }).click();
+  await page.getByRole('button', { name: 'Sprache' }).click();
+  await page.getByRole('button', { name: 'Deutsch' }).click();
+  await page.getByRole('menuitem', { name: 'English' }).click();
+  await page.getByRole('button', { name: 'Close modal' }).click();
+  await page.getByRole('link').filter({ hasText: 'Crop rotation' }).click();
+  await page.getByRole('heading', { name: 'Fruchtfolgen anlegen' }).getByRole('button').click();
+  await page.getByRole('link').filter({ hasText: 'Culture' }).click();
+  await page.getByRole('link').filter({ hasText: 'Operations' }).click();
+  await page.locator('#headlessui-menu-button-_r_a_').click();
+  await page.getByRole('menuitem', { name: 'Season 2023' }).click();
+  await page.getByRole('cell', { name: 'kgN/ha' }).getByRole('link').click();
+  await page.getByRole('link', { name: 'Create fertilizer map' }).click();
+  await page.getByRole('spinbutton', { name: 'Standard rate' }).click();
+  await page.getByRole('spinbutton', { name: 'Standard rate' }).fill('100');
+  await page.getByRole('main').locator('div').filter({ hasText: 'Map settingsPlantingFertilizer applicationFertilizer application5 ZonesEdit' }).nth(3).click();
+  await page.getByRole('button', { name: 'Planting Planting' }).click();
+  await page.getByRole('button', { name: 'Fertilizer application' }).click();
+  await page.getByRole('spinbutton', { name: 'Standard rate' }).click();
+});
