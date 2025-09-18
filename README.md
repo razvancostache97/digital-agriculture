@@ -1,82 +1,109 @@
-# digital-agriculture
 🌱 Agri-Tech QA & Tools Projects
 
-This repository contains a collection of small projects related to agricultural software testing, localization, and bug tracking.
+This repository contains a collection of test automation scripts, translation resources, GIS imports, and bug reports developed for agricultural applications such as Agmeo and Climavi.
 
-📂 Project Structure
+📂 Repository Structure
+
 Project 1 – Playwright Automated Tests
 
-Automated frontend tests using Playwright
- for Agmeo and Climavi applications.
+Project 2 – Agricultural Terms JSON
 
-Covers login flows, navigation, UI interactions, and language switching.
+Project 3 – QGIS JSON Import
 
-Includes exploratory flows for Dry Stress, Low Water, and Risk categories.
+Project 4 – Bug Reports & QA Tickets
 
-Run Tests:
+🧪 Project 1 – Playwright Automated Tests
+🔹 Overview
 
+End-to-end tests written in Playwright
+ for:
+
+Agmeo login & account settings
+
+Climavi login
+
+Navigation between pages (e.g., Dry Stress, Low Water, Risk levels)
+
+Language switching (German → English)
+
+🔹 How to Run Tests
 # Install dependencies
 npm install
+
+# Install Playwright browsers
+npx playwright install
 
 # Run all tests
 npx playwright test
 
-# Run in headed mode
+# Run in headed mode (for debugging)
 npx playwright test --headed
 
-Project 2 – Agricultural Terms JSON
+📘 Project 2 – Agricultural Terms JSON
+🔹 Overview
 
-JSON dictionary of agricultural terms with English → Romanian translations.
-Useful for localization, glossaries, and translation consistency across projects.
+A bilingual English → Romanian dictionary of agricultural terms.
+Useful for:
 
-Example:
+Localization (UI translation consistency)
 
+Building glossaries for agronomic projects
+
+🔹 Example
 {
   "Wheat": "Grâu",
   "Sunflower": "Floarea-soarelui",
   "Crop rotation": "Asolament"
 }
 
-Project 3 – QGIS JSON Import
+🗺️ Project 3 – QGIS JSON Import
+🔹 Overview
 
-Sample project for importing JSON maps into QGIS.
+Demonstrates importing JSON maps into QGIS for:
 
-Demonstrates how to integrate external data layers.
+Visualizing agricultural fields
 
-Useful for agronomic field mapping and visualization.
+Adding spatial data layers
 
-Project 4 – Bug Reports & QA Tickets
+Supporting precision farming analysis
 
-Documentation of critical bugs identified in Agmeo:
+🐞 Project 4 – Bug Reports & QA Tickets
+🔹 Ticket 1 – Fertilizer Application Reset
 
-[Bug] Fertilizer application standard rate resets to 0
+Title: [Bug] Fertilizer application standard rate resets to 0
 
-Priority: P1 (High)
+Priority: P1 – High
 
-Issue: Standard rate value lost when switching between operations.
+Issue: Standard rate field resets when switching operations.
 
-[Bug] Wrong translation after switching to English
+Impact: Data loss during fertilizer planning.
 
-Priority: P2 (Medium)
+🔹 Ticket 2 – Wrong Translation after Language Switch
 
-Issue: Some UI elements remain in German.
+Title: [Bug] Wrong translation displayed after switching language
+
+Priority: P2 – Medium
+
+Issue: Some UI labels remain in German.
+
+Impact: Confusing experience for English users.
 
 Each ticket includes:
 
 Steps to reproduce
 
-Expected vs actual result
+Expected vs actual behavior
 
 Acceptance criteria
 
-Attachments (Playwright test & screenshots)
+Attachments (screenshots & Playwright tests)
 
 🛠 Tech Stack
 
-Playwright – End-to-end testing framework
+Playwright – End-to-end testing
 
-Node.js – Runtime environment for Playwright tests
+Node.js – Runtime environment
 
-JSON – Data structure for translations & QGIS imports
+JSON – Data exchange format
 
-QGIS – GIS software for spatial data visualization
+QGIS – GIS mapping software
