@@ -1,4 +1,4 @@
-🌱 Agri-Tech QA & Tools Projects
+# 🌱 Agri-Tech QA & Tools Projects
 
 This repository contains a collection of test automation scripts, translation resources, GIS imports, and bug reports developed for agricultural applications such as Agmeo and Climavi.
 
@@ -12,34 +12,35 @@ Project 3 – QGIS JSON Import
 
 Project 4 – Bug Reports & QA Tickets
 
-🧪 Project 1 – Playwright Automated Tests
+## 🧪 Project 1 – Playwright Automated Tests
 🔹 Overview
 
 End-to-end tests written in Playwright
  for:
 
-Agmeo login & account settings
+- Agmeo login & account settings
 
-Climavi login
+- Climavi login
 
-Navigation between pages (e.g., Dry Stress, Low Water, Risk levels)
+- Navigation between pages (e.g., Dry Stress, Low Water, Risk levels)
 
-Language switching (German → English)
+- Language switching (German → English)
+#
 
 🔹 How to Run Tests
-# Install dependencies
+### Install dependencies
 npm install
 
-# Install Playwright browsers
+### Install Playwright browsers
 npx playwright install
 
-# Run all tests
+### Run all tests
 npx playwright test
 
-# Run in headed mode (for debugging)
+### Run in headed mode (for debugging)
 npx playwright test --headed
 
-📘 Project 2 – Agricultural Terms JSON
+## 📘 Project 2 – Agricultural Terms JSON
 🔹 Overview
 
 A bilingual English → Romanian dictionary of agricultural terms.
@@ -56,7 +57,7 @@ Building glossaries for agronomic projects
   "Crop rotation": "Asolament"
 }
 
-🗺️ Project 3 – QGIS JSON Import
+## 🗺️ Project 3 – QGIS JSON Import
 🔹 Overview
 
 Demonstrates importing JSON maps into QGIS for:
@@ -67,7 +68,7 @@ Adding spatial data layers
 
 Supporting precision farming analysis
 
-🐞 Project 4 – Bug Reports & QA Tickets
+## 🐞 Project 4 – Bug Reports & QA Tickets
 🔹 Ticket 1 – Fertilizer Application Reset
 
 Title: [Bug] Fertilizer application standard rate resets to 0
